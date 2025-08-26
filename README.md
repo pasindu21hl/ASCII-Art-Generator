@@ -27,7 +27,7 @@ numpy
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/pasindu21hl/ASCII-Art-Generator.git
    cd ascii-art-generator
    ```
 
