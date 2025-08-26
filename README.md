@@ -1,7 +1,6 @@
 # 🎨 ASCII Art Generator  
 
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)  
-![License](https://img.shields.io/github/license/pasindu21hl/ASCII-Art-Generator)  
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)   
 ![Issues](https://img.shields.io/github/issues/pasindu21hl/ASCII-Art-Generator)  
 ![Stars](https://img.shields.io/github/stars/pasindu21hl/ASCII-Art-Generator?style=social)  
 
