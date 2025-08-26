@@ -1,88 +1,121 @@
-# ASCII Art Generator
+# 🎨 ASCII Art Generator  
 
-## Overview
-The ASCII Art Generator is a Python application that converts images into ASCII art. It provides a graphical user interface (GUI) built with Tkinter, allowing users to load images, adjust conversion settings, and save the resulting ASCII art as text or HTML files. The application supports both monochrome and colored ASCII output, with customizable character sets and image processing options.
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)  
+![License](https://img.shields.io/github/license/pasindu21hl/ASCII-Art-Generator)  
+![Issues](https://img.shields.io/github/issues/pasindu21hl/ASCII-Art-Generator)  
+![Stars](https://img.shields.io/github/stars/pasindu21hl/ASCII-Art-Generator?style=social)  
 
-## Features
-- **Image to ASCII Conversion**: Convert images (PNG, JPG, JPEG, BMP, GIF) to ASCII art.
-- **Customizable Settings**:
-  - Adjust width, contrast, brightness, gamma, and height factor.
-  - Toggle color output, inversion, and dithering using checkboxes.
-  - Choose from predefined or custom ASCII character sets.
-- **Preview**: Real-time preview of the image and ASCII output.
-- **Export Options**:
-  - Save ASCII art as a text file.
-  - Save colored ASCII art as an HTML file with styling (color mode recommended for mid-range and high-end PCs).
-  - Copy ASCII art to the clipboard.
-- **Character Set Management**: Add, edit, or delete custom ASCII character sets.
-- **Color Mode Performance Note**: The color mode, which applies individual RGB colors to ASCII characters, is computationally intensive and recommended for mid-range and high-end PCs to ensure smooth performance.
+## 📌 Overview  
+The **ASCII Art Generator** is a Python application that converts images into ASCII art. It comes with a Tkinter-based GUI, allowing you to load images, tweak settings, and export ASCII art as text or HTML. It supports both monochrome and colored ASCII output with customizable character sets.  
 
-## Requirements
-The project dependencies are listed in `requirements.txt`:
+> ⚡ **Note**: Color mode applies per-character RGB coloring and is computationally intensive. It’s recommended for mid-range and high-end PCs.  
+
+---
+
+## ✨ Features  
+- 🖼 **Image to ASCII Conversion** (PNG, JPG, JPEG, BMP, GIF)  
+- 🎛 **Customizable Settings**: width, contrast, brightness, gamma, height factor  
+- 🎨 **Color Mode, Inversion, Dithering** toggles  
+- 🔠 **Character Sets**: Default & custom sets (add, edit, delete)  
+- 👀 **Real-time Preview** (image + ASCII art side by side)  
+- 💾 **Export Options**:  
+  - Save as `.txt`  
+  - Save as `.html` (colored ASCII)  
+  - Copy to clipboard  
+
+---
+
+## 📷 Screenshots  
+
+**Main GUI:**  
+![GUI Preview](assets/screenshot_gui.png)  
+
+**Example Output (Text Mode):**  
+```txt
+@@@@@@@@%%%%%%%%########********+++++++========-------
+@@@@@@@@%%%%%%%%########********+++++++========-------
 ```
-Pillow
-numpy
+
+**Example Output (Color Mode):**  
+![ASCII Color Output](assets/screenshot_color.png)  
+
+---
+
+## ⚙️ Installation  
+
+### 1. Clone the Repository  
+```bash
+git clone https://github.com/pasindu21hl/ASCII-Art-Generator.git
+cd ASCII-Art-Generator
 ```
 
-## Installation
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/pasindu21hl/ASCII-Art-Generator.git
-   cd ascii-art-generator
-   ```
+### 2. (Optional) Create a Virtual Environment  
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-2. **Set Up a Virtual Environment** (optional but recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+### 3. Install Dependencies  
+```bash
+pip install -r requirements.txt
+```
 
-3. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 4. Run the Application  
+```bash
+python ascii_art_generator.py
+```
 
-4. **Run the Application**:
-   ```bash
-   python ascii_art_generator.py
-   ```
+---
 
-## Usage
-1. **Launch the Application**:
-   Run `ascii_art_generator.py` to open the GUI.
+## 🚀 Usage  
 
-2. **Select an Image**:
-   Click "Select Image" to load an image file (PNG, JPG, JPEG, BMP, or GIF).
+1. Launch with `python ascii_art_generator.py`  
+2. Click **Select Image** to choose a file  
+3. Adjust settings (width, brightness, contrast, gamma, etc.)  
+4. Toggle color / inversion / dithering via checkboxes  
+5. Preview updates in real-time  
+6. Save results:  
+   - **Save to File** → `.txt`  
+   - **Save as HTML** → colored `.html`  
+   - **Copy to Clipboard**  
 
-3. **Adjust Settings**:
-   - Use sliders to modify width, contrast, brightness, gamma, height factor, and font size.
-   - Enable/disable color, inversion, or dithering using checkboxes. **Note**: Color mode is recommended for mid-range and high-end PCs due to performance demands.
-   - Select an ASCII character set from the dropdown or manage custom sets with the "Manage Sets" button.
+---
 
-4. **Preview**:
-   The image and ASCII art previews update automatically as settings change. Color mode may slow down preview updates on low-end systems.
+## 📂 File Structure  
 
-5. **Save or Copy**:
-   - Click "Save to File" to save the ASCII art as a `.txt` file.
-   - Click "Save as HTML" to export colored ASCII art as an HTML file (only available with color enabled, recommended for mid-range and high-end PCs).
-   - Click "Copy to Clipboard" to copy the ASCII art to your clipboard.
+```
+ascii-art-generator/
+├── ascii_art_generator.py   # Main application
+├── requirements.txt         # Dependencies (Pillow, NumPy)
+├── assets/                  # Images, screenshots, sample outputs
+```
 
-6. **Manage Character Sets**:
-   - Click "Manage Sets" to add, edit, or delete custom ASCII character sets.
-   - Default sets (Standard, Simple, Blocks, Detailed, Lines) cannot be deleted.
+---
 
-## File Structure
-- `ascii_art_generator.py`: Main application script containing the GUI and ASCII conversion logic.
-- `requirements.txt`: Lists the required Python packages (Pillow and NumPy).
+## 📌 Notes  
 
-## Notes
-- The application uses Tkinter for the GUI, which is included with standard Python installations.
-- **Color Mode**: Enabled via the "Enable Color" checkbox, this mode applies RGB colors to each ASCII character, which increases processing time and memory usage. For optimal performance, use on mid-range or high-end PCs (e.g., systems with at least 8GB RAM and a multi-core processor).
-- Colored ASCII art is displayed in the GUI using Tkinter's text widget and can be exported as HTML for web viewing.
-- The Floyd-Steinberg dithering algorithm is implemented for improved grayscale-to-ASCII conversion when dithering is enabled.
-- Ensure your system has a compatible Tkinter installation for the GUI to function properly.
+- ✅ Tkinter is included in standard Python distributions.  
+- 🐧 On Linux, you may need to install it separately:  
+  ```bash
+  sudo apt-get install python3-tk
+  ```  
+- 🎨 Color mode is resource-heavy → best on systems with **8GB+ RAM** & multi-core CPUs.  
+- Uses **Floyd-Steinberg dithering** for improved grayscale conversion.  
 
-## Acknowledgments
-- Built with [Pillow](https://python-pillow.org/) for image processing.
-- Uses [NumPy](https://numpy.org/) for efficient array operations.
-- Inspired by classic ASCII art generation techniques.
+---
+
+## 🤝 Contributing  
+
+Contributions are welcome!  
+1. Fork the repo  
+2. Create a feature branch (`git checkout -b feature-xyz`)  
+3. Commit changes (`git commit -m 'Add feature xyz'`)  
+4. Push to branch (`git push origin feature-xyz`)  
+5. Open a Pull Request 🚀  
+
+---
+
+## 🙏 Acknowledgments  
+- [Pillow](https://python-pillow.org/) for image processing  
+- [NumPy](https://numpy.org/) for array operations  
+- Classic ASCII art techniques for inspiration  
